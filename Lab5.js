@@ -185,6 +185,60 @@ app.get("/a5/assignment/completed/:checked", (req, res) => {
       todo.due = req.body.due;
       todo.completed = req.body.completed;
       res.sendStatus(200);
-    });    
+    });  
+    
+    /*
+    app.post("/api/users", (req, res) => {
+      const users = req.body;
+      res.json(users);
+    });
+    req, res, users, body, json
+
+    export let movies = [
+      { id: 123, title: "Avatar" },
+      { id: 234, title: "Terminator" },
+      { id: 345, title: "Aliens" },
+      { id: 456, title: "Titanic" },
+    ]
+
+    const MoviesController = (app) => {
+      const createMovie = (req, res) => {
+        const movie = req.body;
+        movie["id"] = new Date().getTime() + '';
+        movie["likes"] = 0;
+        movie["liked"] = false;
+        movies.push(movie);
+        res.json(movie);
+      }
+      app.post("/api/movies", createMovie);
+    }
+
+    export default MoviesController;
+    req, body, movie, res, json, post
+
+
+    const MoviesController = (app) => {
+      const deleteMovie = (req, res) => {
+        const mid = req.params.['mid'];
+        movies = movies.filter((m) => m.id !== mid);
+        res.sendStatus(200);
+      }
+
+      app.delete("/api/movies/:mid", deleteMovie);
+    }
+    export default MoviesController;
+    req, res, delete, mid, sendStatus, app, filter 
+
+
+    app.get("/qwe/:dsa", (zxc, rew) => {
+        const wer = zxc.params.dsa;
+        const ert = "Hello " + wer;
+        rew.json(ert);
+    });
+
+    qwe, dsa, zxc, params, wer, rew, ert
+    
+
+    */
 };
 export default Lab5;
